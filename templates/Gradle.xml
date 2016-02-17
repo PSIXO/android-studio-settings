@@ -1,0 +1,35 @@
+<templateSet group="Gradle">
+  <template name="dep" value="dependencies {&#10;&#9;compile $dependency$&#10;}" description="dependencies block" toReformat="false" toShortenFQNames="true">
+    <variable name="dependency" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="GROOVY" value="true" />
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="GROOVY_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="rep" value="repositories {&#10;    mavenLocal()&#10;    mavenCentral()            &#10;}" description="repositiories" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY" value="true" />
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="GROOVY_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="packo" value="packagingOptions {&#10;    exclude 'LICENSE.txt'&#10;    exclude 'META-INF/LICENSE'&#10;    exclude 'META-INF/LICENSE.txt'&#10;    exclude 'META-INF/NOTICE'&#10;}" description="packaging options" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY" value="true" />
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="GROOVY_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="prop" value="properties.each { prop, val -&gt;&#10;    if(!prop.equals(&quot;properties&quot;)){&#10;        println prop + &quot;=&quot; + val&#10;    }&#10;}" description="Iterates properties of the object with key names" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY" value="true" />
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="GROOVY_DECLARATION" value="true" />
+    </context>
+  </template>
+</templateSet>

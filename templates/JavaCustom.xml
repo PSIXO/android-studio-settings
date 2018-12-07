@@ -1,0 +1,20 @@
+<templateSet group="JavaCustom">
+  <template name="main" value="public static void main(String[] args){&#10;  $END$&#10;}" description="main() method declaration" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY_DECLARATION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="singleton" value="private static class SingletonHelper{&#10;    private static final $CLASS_NAME$ INSTANCE = new $CLASS_NAME$();&#10;}&#10;&#10;private $CLASS_NAME$(){}&#10;&#10;public static $CLASS_NAME$ getInstance(){&#10;        return SingletonHelper.INSTANCE;&#10;}" description="Creates singleton boilerplate" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="injectableSingleton" value="private static $CLASS_NAME$ INSTANCE;&#10;private static Application context;&#10;&#10;&#10;public static void init(@NonNull Application app) {&#10;    context = app;&#10;}&#10;&#10;@NonNull&#10;public static synchronized $CLASS_NAME$ getInstance() {&#10;    if (INSTANCE == null) {&#10;        INSTANCE = new $CLASS_NAME$();&#10;    }&#10;    return INSTANCE;&#10;}&#10;&#10;@VisibleForTesting&#10;public static synchronized void setInstance(@NonNull $CLASS_NAME$ instance) {&#10;    INSTANCE = instance;&#10;}&#10;&#10;private void checkIsInitialized() {&#10;    if (context == null) {&#10;        throw new IllegalStateException(getClass().getSimpleName() + &quot; init not called, must be initialized before use&quot;);&#10;    }&#10;}&#10;&#10;private $CLASS_NAME$() {&#10;    checkIsInitialized();&#10;    //TODO: Initialise your needed objects here&#10;}" description="Creates singleton boilerplate which ccan be switched from tests" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>

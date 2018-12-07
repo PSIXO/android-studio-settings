@@ -1,0 +1,24 @@
+<application>
+  <component name="FileTypeManager" version="17">
+    <extensionMap>
+      <mapping pattern="key" type="PLAIN_TEXT" />
+      <mapping pattern="test" type="PLAIN_TEXT" />
+      <mapping pattern="copyright-template" type="PLAIN_TEXT" />
+      <mapping pattern="cities" type="PLAIN_TEXT" />
+      <mapping pattern="FirebaseRules" type="PLAIN_TEXT" />
+      <mapping pattern="cityids" type="PLAIN_TEXT" />
+      <mapping pattern="forecasts" type="PLAIN_TEXT" />
+      <mapping pattern="dsada" type="PLAIN_TEXT" />
+      <mapping pattern="conditions" type="PLAIN_TEXT" />
+      <mapping pattern=".gitkeep" type="PLAIN_TEXT" />
+      <mapping pattern="alerts" type="PLAIN_TEXT" />
+      <mapping pattern="dsa" type="PLAIN_TEXT" />
+      <mapping pattern="Untitled" type="PLAIN_TEXT" />
+      <mapping pattern="sdkmanager" type="PLAIN_TEXT" />
+      <mapping pattern="l" type="PLAIN_TEXT" />
+      <mapping ext="flat" type="PLAIN_TEXT" />
+      <mapping ext="dex" type="PLAIN_TEXT" />
+      <mapping ext="store" type="PLAIN_TEXT" />
+    </extensionMap>
+  </component>
+</application>

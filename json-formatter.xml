@@ -1,0 +1,5 @@
+<application>
+  <component name="JsonFormatterApplicationSettings">
+    <option name="formatterType" value="LOOSE" />
+  </component>
+</application>

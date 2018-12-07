@@ -1,0 +1,16 @@
+<templateSet group="Android">
+  <template name="toast" value="android.widget.Toast.makeText($className$.this, &quot;$text$&quot;, Toast.LENGTH_SHORT).show();" description="Create a new Toast" toReformat="true" toShortenFQNames="true">
+    <variable name="className" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="mtoast" value="new Handler(Looper.getMainLooper()).post(new Runnable() {&#10;    @Override&#10;    public void run() {&#10;        android.widget.Toast.makeText($parentClassName$.this, &quot;$text$&quot;, Toast.LENGTH_SHORT).show();&#10;    }&#10;});" description="Create a new Toast on main thread" toReformat="true" toShortenFQNames="true">
+    <variable name="parentClassName" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>

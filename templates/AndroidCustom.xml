@@ -1,0 +1,41 @@
+<templateSet group="AndroidCustom">
+  <template name="tagd" value="public static final String TAG = &quot;[$CLASS_NAME$]&quot;;" description="TAG =" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="mixpanel" value=" https://deployinc.jira.com/browse/CHSIRP-$content1$ - Mixpanel: $content2$" description="Adds Mixpanel formated comment" toReformat="true" toShortenFQNames="true">
+    <variable name="content1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="content2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_COMMENT" value="true" />
+    </context>
+  </template>
+  <template name="track" value="        TrackingEvent trackingEvent = TrackingEvent.obtain();&#10;        trackingEvent.addData(EventTrackingConstants.DEVICE, device.getDeviceName());&#10;        trackingEvent.addData(EventTrackingConstants.DEVICE_MODIFIED_TYPE, device.getDeviceType().getDeviceLabel());&#10;        trackingEvent.addData(EventTrackingConstants.IR_CODE_SET_ID, device.getTheIRCodeSetId());&#10;        trackingEvent.addData(EventTrackingConstants.ABSOLUTE_LEVEL, currentPowerOnDelayProgress);&#10;        EventTrackingCollector.INSTANCE.collectEvent(trackingEvent, EventTrackingConstants.$content1$);" description="Set mixpanel track" toReformat="false" toShortenFQNames="true">
+    <variable name="content1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="kill" value="Process.killProcess(android.os.Process.myPid());" description="kills curent process" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="xmlapp" value="xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;" description="adds app namespace in xml" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="xmlandroid" value="xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;" description="Adds xml namespace android" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="xmltools" value="xmlns:tools=&quot;http://schemas.android.com/tools&quot;" description="Adds tools xml namespace" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+</templateSet>
